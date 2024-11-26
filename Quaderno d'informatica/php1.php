@@ -84,7 +84,6 @@ echo nl2br("\n");
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-
 <hr>
 
 <footer>

@@ -44,7 +44,6 @@ if($nomeutente == "Admin" && $password == "123") {
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-
 <hr>
 
 <footer>
