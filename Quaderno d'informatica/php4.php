@@ -14,13 +14,13 @@
 // Avvia la sessione
 session_start();
 
-// Se i dati di registrazione sono stati inviati, memorizzali nella sessione
+// Se i dati di registrazione sono stati inviati, vemgono memorizzati nella sessione
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['signup_username']) && isset($_POST['signup_password'])) {
     $_SESSION['signup_username'] = $_POST['signup_username'];
     $_SESSION['signup_password'] = $_POST['signup_password'];
 }
 
-// Se l'utente sta tentando di accedere
+// Se l'utente sta accedendo
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['login_username']) && isset($_POST['login_password'])) {
     // Recupera i dati di registrazione dalla sessione
     $signup_username = $_SESSION['signup_username'] ?? null;
