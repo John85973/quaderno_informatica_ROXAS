@@ -11,57 +11,31 @@
 <hr>
 
 <?php
-// Avvia la sessione
+
 session_start();
 
-// Se i dati di registrazione sono stati inviati, vemgono memorizzati nella sessione
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['signup_username']) && isset($_POST['signup_password'])) {
-    $_SESSION['signup_username'] = $_POST['signup_username'];
-    $_SESSION['signup_password'] = $_POST['signup_password'];
-}
+$username = $_POST['username'];
+$password = $_POST['password'];
 
-// Se l'utente sta accedendo
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['login_username']) && isset($_POST['login_password'])) {
-    // Recupera i dati di registrazione dalla sessione
-    $signup_username = $_SESSION['signup_username'] ?? null;
-    $signup_password = $_SESSION['signup_password'] ?? null;
+if (!empty($username) && !empty('password')) {
 
-    // Dati inseriti nel form di login
-    $login_username = $_POST['login_username'];
-    $login_password = $_POST['login_password'];
+    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['password'] = $_POST['password'];
 
-    // Verifica delle credenziali
-    if ($signup_username && $login_username === $signup_username && $login_password === $signup_password) {
-        echo "<h1>Benvenuto, $login_username!</h1>";
-        echo '<a href="index.html"><button>Torna alla Home</button></a>';
-    } else {
-        echo "<h1>Credenziali errate. Riprova.</h1>";
-        echo '<a href="php4.php"><button>Torna al Sign In</button></a>';
-    }
+    echo "REGISTRATO CON SUCCESSO<br>";
+    echo "VERIFICA LE CREDENZIALI CLICCANDO SU ACCEDI<br><br>";
+    echo "<form action='esercizio4_1.html'>
+          <button type='submit'>Accedi</button>
+          </form><br>";
+    echo "<form action='esercizio4.html'>
+          <button type='submit'>Indietro</button>
+          </form>";
+
 } else {
-    // Mostra il form di accesso
-    echo '<!DOCTYPE html>
-<html>
-<body>
-    <h1>Accedi</h1>
-
-    <!-- Form di accesso -->
-    <form method="post" action="php4.php">
-        <label for="username">Nome Utente:</label>
-        <input type="text" id="username" name="login_username" required><br><br>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="login_password" required><br><br>
-
-        <button type="submit">Accedi</button>
-    </form>
-
-    <!-- Pulsante per tornare al Sign Up -->
-    <br>
-    <a href="esercizio4.html"><button>Torna alla registrazione</button></a>
-
-</body>
-</html>';
+    echo "REGISTRATO SENZA SUCCESSO<br><br>";
+    echo "<form action='esercizio4.html'>
+          <button type='submit'>Riprova</button>
+          </form>";
 }
 ?>
 
