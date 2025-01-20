@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>argomenti</title>
+</head>
+
+<body>
+
+    <h1>ARGOMENTI AFFRONTATI SUL DATABASE:</h1>
+
+    <br>
+
+    <h1>DATABASE</h1>
+    <p>Un database e una raccolta di dati organizzata in tabelle, ognuna rappresentante un'entita (es. professori, studenti).</p>
+    <p>Le tabelle sono composte da righe (record) e colonne (attributi). Le righe rappresentano i record e le colonne </p>
+    <p>gli attributi di ogni entita.</p>
+
+    <br>
+
+    <h1>ENTITA</h1>
+    <p>Le entita sono oggetti reali (es. una persona, una macchina) e possiedono attributi (es. nome, data di nascita).</p>
+    <p>Le entita devono avere attributi che descrivono le loro caratteristiche.</p>
+
+    <br>
+
+    <h1>CHIAVE PRIMARIA</h1>
+    <p>La chiave primaria identifica univocamente un'entita, come ad esempio il codice fiscale di una persona,</p>
+    <p>che e un attributo unico che non si ripete. Per indicare un attributo come chiave primaria si scrive "PK".</p>
+    <p>La sua sintassi nel linguaggio SQL viene scritto ad esempio: </p><br>
+    <p>CREATE TABLE Studenti (</p>
+    <p>ID_Studente INT <b>PRIMARY KEY</b>,</p>
+    <p>Nome VARCHAR(100),</p>
+    <p>Eta INT</p>
+    <p>);</p>
+
+    <br>
+
+    <h1>CHIAVE ESTERNA</h1>
+    <p>La chiave esterna, o foreign key, e un attributo che viene utilizzato per creare un collegamento</p>
+    <p>con un'altra entita, facendo riferimento alla chiave primaria di quest'ultima.</p><br>
+    <p>Esempio:</p>
+    <p>CREATE TABLE Studenti (</p>
+    <p>ID_Studente INT <b>PRIMARY KEY</b>,</p>
+    <p>Nome VARCHAR(100),</p>
+    <p>Eta INT</p>
+    <p>);</p>
+
+    <br>
+
+    <p>CREATE TABLE Corsi (</p>
+    <p>ID_Corso INT PRIMARY KEY,</p>
+    <p>Nome_Corso VARCHAR(100),</p>
+    <p>ID_Studente INT,</p>
+    <p><b>FOREIGN KEY (ID_Studente) REFERENCES Studenti(ID_Studente)</b></p>
+    <p>);</p><br>
+
+    <h1>CARDINALITA</h1>
+    <p>Definisce la relazione tra le entita, che puo essere di quattro tipi:</p>
+    <p><b>1:1</b>: un'entita e collegata a una sola altra.</p>
+    <p><b>1:N</b>: un'entita e collegata a molte altre entita.</p>
+    <p><b>N:1</b>: molte entita sono collegate a una sola.</p>
+    <p><b>N:N</b>: molte entita sono collegate a molte altre.</p>
+
+    <br>
+
+    <h1>MODELLO E/R</h1>
+    <p>Sarebbe un modello concettuale che viene utilizzata per rappresentare la struttura logica di</p>
+    <p>un database. Il suo scopo e di descrivere attraverso una rappresentazione grafica le entita e</p>
+    <p>i legami tra di loro. Sono composti da:</p>
+    <ul>
+        <li>Entita</li>
+        <li>Attributi</li>
+        <li>Relazione</li>
+        <li>Cardinalita</li>
+        <li>Chiave primaria</li>
+        <li>Chiave esterna</li>
+      </ul>
+      
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <h1>QUERY</h1>
+    <p>Le query sono delle istruzioni che permettono di interagire con il database per eseguire operazioni come lettura, inserimento e aggiornamento. Ecco un esempio di query:</p>
+    <p><b>SELECT</b> cognome, eta 
+    <p><b>FROM</b> Studenti </p>
+    <p><b>WHERE</b> eta < 18;</p>
+
+    <br>
+
+    <h1>COMANDI BASE (SQL)</h1>
+    <p><b>CREATE DATABASE</b>: crea un database.</p>
+    <p><b>DROP DATABASE</b>: elimina un database.</p>
+    <p><b>CREATE TABLE</b>: crea una tabella.</p>
+    <p><b>DROP TABLE</b>: elimina una tabella.</p>
+
+    <br>
+
+    <h2>ALTER</h2>
+    <p>Il comando ALTER viene utilizzato per modificare una tabella. Puo essere usato per aggiungere, eliminare o cambiare colonne all'interno di una tabella.</p>
+    <p><strong>ADD</strong>: aggiunge una colonna.</p>
+    <p><strong>DROP</strong>: elimina una colonna.</p>
+    <p><strong>CHANGE</strong>: modifica una colonna esistente.</p>
+    
+    <br>
+
+    <h2>INSERT INTO</h2>
+    <p>Il comando INSERT INTO viene usato per inserire nuovi dati in una tabella. Esempio:</p>
+    <p><b>INSERT INTO</b> nometabella 
+    <p><b>VALUES</b> ("Marco", "Rossi", "JDW93H284H");<p>
+
+    <br>
+
+    <h2>SELECT</h2>
+    <p>Il comando SELECT permette di estrarre dati da una tabella. Esempio:</p>
+    <p><b>SELECT</b> cognome, eta 
+    <p><b>FROM</b> Studenti </p>
+    <p><b>WHERE</b> eta < 18;</p>
+
+    <br>
+    <br>
+
+    <form action="index.html">
+        <button type="submit">Torna nella pagina principale</button>
+    </form>
+
+    <br>
+    <br>
+
+</body>
+</html>

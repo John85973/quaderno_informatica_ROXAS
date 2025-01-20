@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>esempio</title>
+    </head>
+
+<body>
+
+    <h1>SPIEGAZIONE:</h1>
+    <p>Questo esempio contiene un modulo che permette all'utente di inserire le informazioni di</p>
+    <p>registrazione, come l'ID dello studente, il nome, il cognome e il numero di telefono. Quando l'utente</p>
+    <p>invia il modulo, i dati vengono inviati tramite il metodo POST al file PHP "eserciziodatabase1.php"</p>
+    <p>per essere elaborati e inseriti nel database. C'e anche un pulsante che consente di tornare alla pagina</p>
+    <p>principale.</p>
+
+    <hr>
+
+    <h1>REGISTRAZIONE SCUOLA</h1>
+
+    <form action="eserciziodatabase1.php" method="POST">
+
+        <label for="id_studente">ID STUDENTE</label><br>
+        <input type="text" name="id_studente" required><br><br>
+
+        <label for="nome">NOME</label><br>
+        <input type="text" name="nome" required><br><br>
+
+        <label for="cognome">COGNOME</label><br>
+        <input type="text" name="cognome" required><br><br>
+
+        <label for="telefono">NUMERO DI TELEFONO</label><br>
+        <input type="text" name="telefono" required><br><br>
+
+        <input type="submit" value="registrati">
+
+    </form>
+
+    <br>
+
+    <form action="index.html">
+        <button type="submit">indietro</button>
+    </form><br>
+
+</body>
+
+</html>
