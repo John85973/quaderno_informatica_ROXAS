@@ -1,0 +1,82 @@
+    <!DOCTYPE HTML>
+    <html>
+        <head>
+            <title>esempio</title>
+        </head>
+
+    <body>
+
+        <h1>SPIEGAZIONE</h1>
+        <p>Il codice crea una pagina web per registrare automobili e proprietari in un database MySQL.</p>
+        <p>Inizia con un modulo HTML dove l'utente inserisce i dati dell'automobile, come targa, modello, marca e colore.</p>
+        <p>Contemporaneamente, l'utente puo inserire i dati del proprietario, come codice fiscale, nome e cognome.</p>
+        <p>Quando il modulo viene inviato, i dati vengono inviati al server tramite il metodo POST.</p>
+        <p>Un file PHP riceve questi dati e si connette al database MySQL usando le credenziali fornite.</p>
+        <p>Il PHP esegue due query per inserire i dati nelle rispettive tabelle: una per le automobili e una per i proprietari.</p>
+        <p>Una volta completato l'inserimento, viene mostrato un messaggio di conferma dell'avvenuta registrazione.</p>
+        <p>Infine, la pagina consente di visualizzare le tabelle con i dati gia registrati.</p><br>
+
+
+        <p><b>Per far funzionare il codice:</b></p>
+        <p>1. Apri il tuo browser e accedi a `http://localhost/phpmyadmin/`.</p>
+        <p>2. Clicca su "Nuovo" nella barra laterale sinistra per creare un nuovo database.</p>
+        <p>3. Dai un nome al database come in questo caso "AutomobileProprietario" e clicca su Crea.</p>
+        <p>5. Crea le tabelle Automobile, Proprietario e Possesso con gli attributi seguendo il problema </p>
+        <p>6. Clicca esegui per creare le tabelle</p>
+        
+
+        <h1>PROBLEMA SCELTO:</h1>
+        <p>Si vuole progettare una base di dati per gestire le informazioni di automobili, descritte da una targa, un</p>
+        <p>modello, una marca e un colore e dei rispettivi proprietari, che possono anche essere piu di uno, identificati da</p>
+        <p>un codice fiscale, nome e cognome, sia come proprietari attuali che come eventuali proprietari passati, ne</p>
+        <p>qual caso e anche necessario indicare il periodo di possesso dell'autovettura. Ricordiamo che un proprietari in</p>
+        <p>puo possedere piu automobili.</p><br>
+
+
+
+
+        <hr><br>
+
+        <h2>REGISTRAZIONE AUTOMOBILI</h2>
+
+        <form action="esercitazione.php" method="POST">
+
+            <label for="targa">TARGA</label><br>
+            <input type="text" name="targa" required><br><br>
+
+            <label for="modello">MODELLO</label><br>
+            <input type="text" name="modello" required><br><br>
+
+            <label for="marca">MARCA</label><br>
+            <input type="text" name="marca" required><br><br>
+
+            <label for="colore">COLORE</label><br>
+            <input type="text" name="colore" required><br><br>
+
+
+            <h2>REGISTRAZIONE PROPRIETARI</h2>
+
+            <label for="CF">CODICE FISCALE</label><br>
+            <input type="text" name="CF" required><br><br>
+
+            <label for="nome">NOME</label><br>
+            <input type="text" name="nome" required><br><br>
+
+            <label for="cognome">COGNOME</label><br>
+            <input type="text" name="cognome" required><br><br>
+
+
+            <input type="submit" value="registrati">
+
+        </form>
+
+        
+        <br><br>
+
+        <form action="index.html">
+            <button type="submit">indietro</button>
+        </form><br>
+
+    </body>
+
+    </html>
