@@ -2,7 +2,10 @@ DOCUMENTAZIONE
 
 PROBLEMA:
 Automobili e proprietari
-Si vuole progettare una base di dati per gestire le informazioni di automobili, descritte da una targa, un modello, una marca e un colore e dei rispettivi proprietari, che possono anche essere più di uno, identificati da un codice fiscale, nome e cognome, sia come proprietari attuali che come eventuali proprietari passati, nel qual caso è anche necessario indicare il periodo di possesso dell'autovettura. Ricordiamo che un proprietario in può possedere più automobili.
+Si vuole progettare una base di dati per gestire le informazioni di automobili, descritte da una targa, un modello, 
+una marca e un colore e dei rispettivi proprietari, che possono anche essere più di uno, identificati da un codice fiscale, 
+nome e cognome, sia come proprietari attuali che come eventuali proprietari passati, nel qual caso è anche necessario indicare 
+il periodo di possesso dell'autovettura. Ricordiamo che un proprietario in può possedere più automobili.
 
 
 Il sistema deve permettere di:
@@ -52,8 +55,15 @@ Proprietario -(1,N)- Possesso -(N,N)- Automobile
 
 
 SPIEGAZIONE DEL PROCESSO:
-Il codice crea una pagina web per registrare informazioni su automobili e proprietari in un database MySQL. La pagina inizia con un modulo HTML dove l'utente può inserire i dati di un'automobile (targa, modello, marca, colore) e i dati di un proprietario (codice fiscale, nome, cognome). Quando l'utente invia il modulo, i dati vengono inviati al server tramite il metodo POST.
-Un file PHP riceve i dati e si connette al database utilizzando le credenziali di accesso. Successivamente, esegue due query SQL: una per inserire i dati dell'automobile nella tabella dedicata e un'altra per inserire i dati del proprietario in un'altra tabella. Dopo l'inserimento, viene mostrato un messaggio di conferma per indicare che l'operazione è andata a buon fine. Inoltre, c'è una funzione che permette di visualizzare le tabelle già popolate con le automobili e i proprietari registrati fino a quel momento.
+Il codice crea una pagina web per registrare informazioni su automobili e proprietari in un database MySQL. La pagina 
+inizia con un modulo HTML dove l'utente può inserire i dati di un'automobile (targa, modello, marca, colore) e i dati 
+di un proprietario (codice fiscale, nome, cognome). Quando l'utente invia il modulo, i dati vengono inviati al server 
+tramite il metodo POST.
+Un file PHP riceve i dati e si connette al database utilizzando le credenziali di accesso. Successivamente, esegue due 
+query SQL: una per inserire i dati dell'automobile nella tabella dedicata e un'altra per inserire i dati del proprietario 
+in un'altra tabella. Dopo l'inserimento, viene mostrato un messaggio di conferma per indicare che l'operazione è andata a 
+buon fine. Inoltre, c'è una funzione che permette di visualizzare le tabelle già popolate con le automobili e i proprietari 
+registrati fino a quel momento.
 
 
 Per far funzionare il codice:
