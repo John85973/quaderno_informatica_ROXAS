@@ -38,14 +38,7 @@ CREATE TABLE `automobile` (
 -- Dump dei dati per la tabella `automobile`
 --
 
-INSERT INTO `automobile` (`targa`, `modello`, `marca`, `colore`) VALUES
-('dj2n4', 'Lamborghini', 'FORD', 'BIANCO'),
-('JD83H', 'LUXURY', 'TOYOTA', 'NERO'),
-('JD84', 'misse', 'misse', 'misse'),
-('JD847', 'misse', 'misse', 'misse'),
-('NFI442', 'SUPRA', 'TOYOTA', 'NERO'),
-('NFI442d39', 'Lamborghini', 'FORD', 'BIANCO'),
-('NFI442d396', 'Lamborghini', 'FORD', 'BIANCO');
+
 
 -- --------------------------------------------------------
 
@@ -77,14 +70,7 @@ CREATE TABLE `proprietario` (
 -- Dump dei dati per la tabella `proprietario`
 --
 
-INSERT INTO `proprietario` (`CF`, `nome`, `cognome`) VALUES
-('dn92', 'Luca', 'Rossi'),
-('kdie93', 'Giovanni', 'Giorgio'),
-('kdie93jbjb', 'Giovanni', 'Giorgioooo'),
-('ND92ND92N', 'Michele', 'Roxano'),
-('NF39312', 'MArio', 'Crudeli'),
-('NF93NF3', 'Luca', 'Rossi'),
-('NF93NF36', 'Luca', 'Rossi');
+
 
 --
 -- Indici per le tabelle scaricate
