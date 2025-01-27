@@ -9,9 +9,9 @@ il periodo di possesso dell'autovettura. Ricordiamo che un proprietario in può 
 
 
 Il sistema deve permettere di:
-Memorizzare informazioni sulle automobili (targa, modello, marca, colore).
-Memorizzare informazioni sui proprietari (codice fiscale, nome, cognome).
-Registrare il periodo di possesso per ogni relazione proprietario e auto.
+- Memorizzare informazioni sulle automobili (targa, modello, marca, colore).
+- Memorizzare informazioni sui proprietari (codice fiscale, nome, cognome).
+- Registrare il periodo di possesso per ogni relazione proprietario e auto.
 
 
 
