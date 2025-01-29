@@ -3,6 +3,8 @@
   <title>Accesso a pagina riservata</title>
 </head>
 
+<body>
+
 <h1>SPIEGAZIONE</h1>
 <p>Il file PHP riceve il nome utente e la password inviati dal form tramite metodo POST.</p>
 <p>Verifica se il nome utente è "Admin" e la password è "123", se sono corretti mostra un messaggio di benvenuto.</p>
